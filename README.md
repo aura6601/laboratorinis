@@ -102,3 +102,30 @@ studentai10000000.txt:
 
     Nuskaitymas: s
     Suskirstymas: s
+    
+# optimizuota programa naudojant vector tipo konteinerį 
+studentai1000.txt:
+
+    Nuskaitymas: 7.7745 s
+    Suskirstymas: 0.0191842 s
+
+studentai10000.txt:
+
+    Nuskaitymas:  9.2397s
+    Suskirstymas: 0.169053s
+    
+studentai100000.txt:
+
+    Nuskaitymas: 31,4705s
+    Suskirstymas: 1.25842s
+    
+studentai1000000.txt:
+
+    Nuskaitymas:  166.585s
+    Suskirstymas: 15.4309s
+
+studentai10000000.txt:
+
+    Nuskaitymas: s
+    Suskirstymas: s
+
