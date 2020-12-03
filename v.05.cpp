@@ -3,9 +3,28 @@
 
 int main()
 {
+	string ats; 
+	do {
+		try {
+			cout << "Pasirinkite konteinerio tipa 'list' arba 'vector'" << endl;
+		    cin >> ats;
+
+			if (ats != "list" && ats != "vector") {
+				throw runtime_error("Klaida! Reikia ivesti 'list' arba 'vector'");
+			}
+		}
+		catch (runtime_error& e) {
+			cout << e.what() << endl;
+			cout << "Jus ivedete: " << ats<< endl;
+		}
+	}
+	while (ats != "list" && ats != "vector");
+	if (ats == "list")
+	{
+	}
 	auto start1 = chrono::high_resolution_clock::now();
 
-	list<studentas> sarasas = nuskaitymas();
+	vector<studentas> sarasas = nuskaitymas_vector();
 
 	auto finish1 = chrono::high_resolution_clock::now();
 	chrono::duration<double> time1 = finish1 - start1;
