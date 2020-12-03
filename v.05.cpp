@@ -3,15 +3,15 @@
 
 int main()
 {
-	auto start = chrono::high_resolution_clock::now();
+	auto start1 = chrono::high_resolution_clock::now();
 
 	list<studentas> sarasas = nuskaitymas();
 
-	auto finish = chrono::high_resolution_clock::now();
-	chrono::duration<double> laikas = finish - start;
-	cout << "Duomenu is failo nuskaitymas uztruko: " << laikas.count() << "s" << endl;
+	auto finish1 = chrono::high_resolution_clock::now();
+	chrono::duration<double> time1 = finish1 - start1;
+	cout << "Duomenu is failo nuskaitymas uztruko: " << time1.count() << "s" << endl;
 
-	auto start1 = chrono::high_resolution_clock::now();
+	auto start2 = chrono::high_resolution_clock::now();
 
 	vector<vargsiukai> varg;
 	vector<galvociai> galv;
@@ -24,8 +24,9 @@ int main()
 			galv.push_back(galvociai{ s.vardas, s.pavarde, s.galutinis });
 		}
 	}
-	auto finish1 = chrono::high_resolution_clock::now();
-	chrono::duration<double> laikas1 = finish1 - start1;
-	cout << "Studentu suskirstymas uztruko: " << laikas1.count() << "s" << endl;
+
+	auto finish2 = chrono::high_resolution_clock::now();
+	chrono::duration<double> time2 = finish2 - start2;
+	cout << "Studentu suskirstymas uztruko: " << time2.count() << "s" << endl;
 
 }
