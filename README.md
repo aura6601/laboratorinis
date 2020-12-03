@@ -1,5 +1,6 @@
 # laboratorinis
 # v.05 versija
+# Rezultatai naudojant list tipo konteinerius:
 studentai1000.txt:
 
     Nuskaitymas: 11.118 s
