@@ -81,11 +81,28 @@ list<studentas> nuskaitymas() {
 void spausdinimas(vector<studentas>sarasas)
 {
 
-    cout << setw(10) << "Vardas" << setw(25) << "Pavarde" << setw(25) << "Galutinis"<< endl;
-    cout << "---------------------------------------------------------------------------------------------------------\n";
-    for (int i = 0; i < vardai.size(); i++) {
+	auto start = chrono::high_resolution_clock::now();
 
-        cout << setw(5) << vardai[i] << setw(25) << pavardes[i] << setw(25) << galutinis1[i] << endl;
+	fstream failas;
 
-    }
+	string pav;
+	cout << "Iveskite failo, i kuri irasysite duomenis, pavadinima" << endl;
+	cin >> pav;
+
+	failas.open(pav);
+
+	failas << left << setw(30) << "Vardas" << setw(30) << "Pavarde" << setw(30) << "Galutinis balas (vidurkis)" << endl;
+
+	for (int i = 0; i < sarasas.size(); i++) {
+		failas << left << setw(30) << sarasas[i].vardas << setw(30) << sarasas[i].pavarde << setw(30) <<sarasas[i].galutinis << endl;
+	}
+
+	failas.close();
+	sarasas.clear();
+
+	auto finish = chrono::high_resolution_clock::now();
+	chrono::duration<double> time = finish - start;
+
+	cout << "Failo irasymas truko: " << time.count() << "s" << endl;
 }
+
