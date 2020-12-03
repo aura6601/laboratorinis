@@ -19,14 +19,17 @@ using namespace std;
 #include <cstdio>
 #include <sstream> 
 #include <chrono>
+#include <vector>
 #include <list>
+
 
 #include "struktura.h";
 
+bool tikrinimas(const studentas& eilute);
 bool compareVardai(studentas a, studentas b);
 bool comparePavardes(studentas a, studentas  b);
 
-list<studentas> nuskaitymas();
-void spausdinimas(vector<studentas> sarasas);
+vector<studentas> nuskaitymas_vector();
+list<studentas> nuskaitymas_list();
 
 #endif

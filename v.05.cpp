@@ -39,6 +39,8 @@ int main()
 			}
 		}
 
+		sarasas.remove_if(tikrinimas);
+
 		auto finish2 = chrono::high_resolution_clock::now();
 		chrono::duration<double> time2 = finish2 - start2;
 		cout << "Studentu suskirstymas uztruko: " << time2.count() << "s" << endl;
@@ -65,6 +67,8 @@ int main()
 				varg.push_back(vargsiukai{ s.vardas, s.pavarde, s.galutinis });
 			}
 		}
+
+		sarasas.erase(remove_if(sarasas.begin(), sarasas.end(), tikrinimas), sarasas.end());
 
 		auto finish2 = chrono::high_resolution_clock::now();
 		chrono::duration<double> time2 = finish2 - start2;
