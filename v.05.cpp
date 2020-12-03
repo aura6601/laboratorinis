@@ -21,31 +21,34 @@ int main()
 	while (ats != "list" && ats != "vector");
 	if (ats == "list")
 	{
-	}
-	auto start1 = chrono::high_resolution_clock::now();
+		auto start1 = chrono::high_resolution_clock::now();
 
-	vector<studentas> sarasas = nuskaitymas_vector();
+		vector<studentas> sarasas = nuskaitymas_vector();
 
-	auto finish1 = chrono::high_resolution_clock::now();
-	chrono::duration<double> time1 = finish1 - start1;
-	cout << "Duomenu is failo nuskaitymas uztruko: " << time1.count() << "s" << endl;
+		auto finish1 = chrono::high_resolution_clock::now();
+		chrono::duration<double> time1 = finish1 - start1;
+		cout << "Duomenu is failo nuskaitymas uztruko: " << time1.count() << "s" << endl;
 
-	auto start2 = chrono::high_resolution_clock::now();
+		auto start2 = chrono::high_resolution_clock::now();
 
-	vector<vargsiukai> varg;
-	vector<galvociai> galv;
+		list<vargsiukai> varg;
 
-	for (studentas& s : sarasas) {
-		if (s.galutinis < 5) {
-			varg.push_back(vargsiukai{ s.vardas, s.pavarde, s.galutinis });
+		for (studentas& s : sarasas) {
+			if (s.galutinis < 5) {
+				varg.push_back(vargsiukai{ s.vardas, s.pavarde, s.galutinis });
+			}
 		}
-		else if (s.galutinis >= 5) {
-			galv.push_back(galvociai{ s.vardas, s.pavarde, s.galutinis });
-		}
+
+		auto finish2 = chrono::high_resolution_clock::now();
+		chrono::duration<double> time2 = finish2 - start2;
+		cout << "Studentu suskirstymas uztruko: " << time2.count() << "s" << endl;
+
+		sarasas.clear();
+
 	}
+	else if{
 
-	auto finish2 = chrono::high_resolution_clock::now();
-	chrono::duration<double> time2 = finish2 - start2;
-	cout << "Studentu suskirstymas uztruko: " << time2.count() << "s" << endl;
-
-}
+	}
+	else return 1;
+	}
+	
