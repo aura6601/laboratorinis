@@ -1,6 +1,7 @@
 # laboratorinis
 # v1.0 versija
-# Rezultatai naudojant list tipo konteinerius:
+# 1 strategija
+# list konteineriai 
 studentai1000.txt:
 
     Nuskaitymas: 11.118 s
@@ -25,7 +26,7 @@ studentai10000000.txt:
     Nuskaitymas: s
     Suskirstymas: s
     
-# Rezultatai naudojant vector tipo konteinerius:
+# vector konteineriai:
 studentai1000.txt:
 
     Nuskaitymas: 11.323 s
@@ -49,14 +50,55 @@ studentai10000000.txt:
 
     Nuskaitymas: s
     Suskirstymas: s
+# 2 strategija
+# list konteineriai 
+studentai1000.txt:
 
+    Nuskaitymas: 5.25512 s
+    Suskirstymas: 0.0071588 s
 
+studentai10000.txt:
 
+    Nuskaitymas: 7.23624  s
+    Suskirstymas: 0.0562012 s
+    
+studentai100000.txt:
 
-Testavimo sistemos parametrai:
+    Nuskaitymas: 23.1773 s
+    Suskirstymas: 0.551783s
+    
+studentai1000000.txt:
 
-CPU: Intel(R) Pentium(R)3805U @1.90GHz 1.90 GHz
+    Nuskaitymas: 153.907s
+    Suskirstymas: 7.76279s
 
-RAM: 8.00GB
+studentai10000000.txt:
 
-SSD: 454GB
+    Nuskaitymas: s
+    Suskirstymas: s
+    
+# vector konteineriai:
+studentai1000.txt:
+
+    Nuskaitymas: 7.4129 s
+    Suskirstymas: 0.0235285 s
+
+studentai10000.txt:
+
+    Nuskaitymas:  9.15325s
+    Suskirstymas: 0.141136s
+    
+studentai100000.txt:
+
+    Nuskaitymas: 22.2453s
+    Suskirstymas: 0.909067s
+    
+studentai1000000.txt:
+
+    Nuskaitymas:  171.454s
+    Suskirstymas: 11.8732s
+
+studentai10000000.txt:
+
+    Nuskaitymas: s
+    Suskirstymas: s
